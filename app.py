@@ -221,19 +221,20 @@ with tab2:
     st.plotly_chart(fig, use_container_width=True)
 
 with tab3:
-    st.markdown(f"""
+    st.markdown(r"""
     ### Phương Pháp Tính Lãi Suất Thực
     
-    1. **Tính lạm phát trung bình giai đoạn {start_yr} - {end_yr}:**
-       Giai đoạn này gồm {end_yr - start_yr + 1} năm, lạm phát trung bình cộng được lấy từ dữ liệu World Bank API.
+    1. **Tính lạm phát trung bình:**
+       Tỷ lệ lạm phát bình quân được lấy từ dữ liệu chính thức của World Bank API.
        
     2. **Phương trình Fisher (Fisher Equation):**
-       $$r_r = \\frac{1 + r_n}{1 + i} - 1$$
-       
-       * Trong đó:
-         * $r_r$: Lãi suất thực (Real Interest Rate)
-         * $r_n$: Lãi suất danh nghĩa (Nominal Interest Rate) = `{nominal_rate}%`
-         * $i$: Tỷ lệ lạm phát (Inflation Rate) = `{custom_inflation}%`
+    
+    $$r_r = \frac{1 + r_n}{1 + i} - 1$$
+    
+    * **Trong đó:**
+      * $r_r$: Lãi suất thực (Real Interest Rate)
+      * $r_n$: Lãi suất danh nghĩa (Nominal Interest Rate)
+      * $i$: Tỷ lệ lạm phát (Inflation Rate)
     """)
 
 # Footer
